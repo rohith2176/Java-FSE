@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Local Community Event Portal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel ="stylesheet" href="styles.css">
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        nav{
+            background-color: black;
+            padding: 10px;
+        }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        /* Welcome Banner */
+
+        #welcomeBanner{
+        
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Highlight Class */
+
+        .highlight{
+            background-color: yellow;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        /* Gallery Images */
+
+        .galleryImage{
+            width: 200px;
+            height: 150px;
+            border: 3px solid black;
+            padding: 5px;
+        }
+
+        /* Form Styling */
+
+        form{
+            width: 400px;
+            padding: 20px;
+            border: 2px solid gray;
+            margin-top: 20px;
+            background-color: #f2f2f2;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        button{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover{
+            background-color: darkblue;
+        }
+
+        #feeDisplay{
+            color: green;
+            font-weight: bold;
+        }
+
+        #charCount{
+            color: red;
+            font-weight: bold;
+        }
+
+        video{
+            margin-top: 20px;
+            border: 3px solid black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Section -->
+
+   <nav>
+
+    <ul>
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#events">Events</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+        <li><a href="help.html" target="_blank">Help</a></li>
+
+    </ul>
+
+</nav>
+
+    <hr>
+
+    <!-- Home Section -->
+
+    <section id="home">
+
+        <div id="welcomeBanner" class ="mainHeader">
+
+            <h1 style ="color:red;">
+                Welcome Resident
+            </h1>
+
+            <p>
+                Special Offer:
+                <span style="color:red; font-weight:bold;">
+                    Free Registration Today!
+                </span>
+            </p>
+
+        </div>
+
+        <p class="highlight">
+            Hurry! Limited seats available.
+        </p>
+        <p id="eventInfo"></p>
+
+    </section>
+
+    <hr>
+
+    <!-- Events Section -->
+
+    <section id="events">
+
+        <h2>Community Event Gallery</h2>
+        <div id="eventContainer"></div>
+
+        <table>
+            <tr>
+
+    <th>Event Image</th>
+
+    <th>Event Image</th>
+
+    <th>Event Image</th>
+
+</tr>
+
+            <!-- Row 1 -->
+
+            <tr>
+
+                <td class="eventCard">
+
+                    <img src="images/event1.jpg"
+                         alt="Music Event"
+                         title="Music Event"
+                         class="galleryImage">
+
+                    <p>Music Festival</p>
+
+                </td>
+
+                <td class="eventCard">
+
+                    <img src="images/event2.jpg"
+                         alt="Food Event"
+                         title="Food Event"
+                         class="galleryImage">
+
+                    <p>Food Carnival</p>
+
+                </td>
+
+                <td class="eventCard">
+
+                    <img src="images/event3.jpg"
+                         alt="Sports Event"
+                         title="Sports Event"
+                         class="galleryImage">
+
+                    <p>Sports Competition</p>
+
+                </td>
+
+            </tr>
+
+            <!-- Row 2 -->
+
+            <tr>
+
+                <td class="eventCard">
+
+                    <img src="images/event4.jpg"
+                         alt="Dance Event"
+                         title="Dance Event"
+                         class="galleryImage">
+
+                    <p>Dance Show</p>
+
+                </td>
+
+                <td class="eventCard">
+
+                    <img src="images/event5.jpg"
+                         alt="Art Event"
+                         title="Art Event"
+                         class="galleryImage">
+
+                    <p>Art Exhibition</p>
+
+                </td>
+
+                <td class="eventCard">
+
+                    <img src="images/event6.jpg"
+                         alt="Community Meeting"
+                         title="Community Meeting"
+                         class="galleryImage">
+
+                    <p>Community Meeting</p>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+    <hr>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+
+        <h2>Event Registration Form</h2>
+
+        <form onsubmit="showMessage(); return false;">
+
+            <!-- Name -->
+
+            <label>Full Name:</label>
+
+            <input type="text"
+                   placeholder="Enter your name"
+                   required
+                   autofocus>
+
+            <!-- Email -->
+
+            <label>Email:</label>
+
+            <input type="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <!-- Phone -->
+
+            <label>Phone Number:</label>
+
+            <input type="text"
+                   id="phone"
+                   placeholder="Enter 10 digit phone number"
+                   onblur="validatePhone()">
+
+            <!-- Date -->
+
+            <label>Event Date:</label>
+
+            <input type="date"
+                   required>
+
+            <!-- Event Dropdown -->
+
+            <label>Select Event Type:</label>
+
+            <select id="eventSelect"
+                    onchange="showFee()"
+                    required>
+
+                <option value="">
+                    Choose Event
+                </option>
+
+                <option value="100">
+                    Music Festival
+                </option>
+
+                <option value="200">
+                    Food Carnival
+                </option>
+
+                <option value="300">
+                    Sports Competition
+                </option>
+
+            </select>
+
+            <!-- Fee Display -->
+
+            <p id="feeDisplay"></p>
+
+            <!-- Message -->
+
+            <label>Message:</label>
+
+            <textarea id="feedback"
+                      rows="5"
+                      placeholder="Enter your message"
+                      onkeyup="countCharacters()">
+            </textarea>
+
+            <!-- Character Count -->
+
+            <p>
+                Characters Typed:
+                <span id="charCount">0</span>
+            </p>
+
+            <!-- Register Button -->
+
+            <button type="submit"
+                    onclick="showConfirmation()">
+
+                Register
+
+            </button>
+
+            <br><br>
+
+            <!-- Output -->
+
+            <output id="confirmationMessage"></output>
+
+        </form>
+
+    </section>
+
+    <hr>
+
+    <!-- Double Click Image -->
+
+    <h2>Double Click Image To Enlarge</h2>
+
+    <img src="images/event1.jpg"
+         id="eventImage"
+         width="200"
+         ondblclick="enlargeImage()">
+
+    <hr>
+
+    <!-- Video Section -->
+
+    <h2>Event Promo Video</h2>
+
+    <video width="400"
+           controls
+           oncanplay="videoReady()">
+
+        <source src="media/eventvideo.mp4"
+                type="video/mp4">
+
+    </video>
+
+    <p id="videoMessage"></p>
+
+    <hr>
+
+    <!-- Local Storage Section -->
+
+    <h2>User Preferences</h2>
+
+    <button onclick="savePreference()">
+        Save Preferred Event
+    </button>
+
+    <button onclick="clearPreferences()">
+        Clear Preferences
+    </button>
+
+    <p id="savedPreference"></p>
+
+    <hr>
+
+    <!-- Geolocation Section -->
+
+    <h2>Find Nearby Events</h2>
+
+    <button onclick="findLocation()">
+        Find Nearby Events
+    </button>
+
+    <p id="locationResult"></p>
+    <hr>
+
+<section id="news">
+
+    <h2>Community Bulletin</h2>
+
+    <div class="newsArticle">
+
+        The Local Community Event Portal continues to bring residents
+        together through cultural programs, sports competitions,
+        food festivals, art exhibitions, and educational workshops.
+        Residents are encouraged to participate in upcoming activities
+        and support community development initiatives.
+
+        The city council has announced several new projects aimed at
+        improving parks, public spaces, and recreational facilities.
+        Volunteers are welcome to join community clean-up drives and
+        neighborhood improvement programs.
+
+        Families can enjoy weekend entertainment programs, children's
+        activities, music performances, and health awareness campaigns.
+        Community leaders believe these events help strengthen social
+        connections and improve quality of life for everyone.
+
+    </div>
+
+</section>
+
+
+    <!-- Footer Section -->
+
+    <footer>
+
+        <hr>
+
+        <p>
+            © 2026 Local Community Event Portal
+        </p>
+
+    </footer>
+
+    <!-- JavaScript Section -->
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

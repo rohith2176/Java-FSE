@@ -1,0 +1,492 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+
+    /* =========================
+   BODY STYLING
+========================= */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+
+    /* Fallback color */
+    background-color: #f0f8ff;
+
+    /* Background image */
+    background-image: url("images/eventbg.jpg");
+
+    /* Prevent repeating */
+    background-repeat: no-repeat;
+
+    /* Cover full screen */
+    background-size: cover;
+
+    /* Keep image fixed */
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+nav{
+
+    background-color: #000000;
+
+    padding: 15px;
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+    /* =========================
+   NAVIGATION LINKS
+========================= */
+
+nav a{
+
+    color: white;
+
+    text-decoration: none;
+
+    margin-right: 20px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+/* =========================
+   LINK STATES
+========================= */
+
+/* Normal link */
+
+nav a:link{
+    color: white;
+}
+
+/* Visited link */
+
+nav a:visited{
+    color: lightgray;
+}
+
+/* Mouse hover */
+
+nav a:hover{
+
+    background-color: white;
+
+    color: blue;
+}
+
+/* While clicking */
+
+nav a:active{
+
+    background-color: yellow;
+
+    color: black;
+}
+
+
+/* =========================
+   WELCOME BANNER
+========================= */
+
+#welcomeBanner{
+    background-color: rgba(0, 0, 255, 0.7);
+
+    width: 100%;
+
+    min-height: 20vh;
+
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+/* =========================
+   HIGHLIGHT TEXT
+========================= */
+
+.highlight{
+    background-color: yellow;
+    font-weight: bold;
+    padding: 5px;
+}
+/* =========================
+   UNIVERSAL SELECTOR
+========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   ELEMENT SELECTOR
+========================= */
+
+h2{
+    color: darkblue;
+    margin-top: 20px;
+}
+
+/* =========================
+   ID SELECTOR
+========================= */
+
+#mainHeader{
+    border-radius: 10px;
+}
+
+/* =========================
+   CLASS SELECTOR
+========================= */
+
+.eventCard{
+    border: 2px solid gray;
+    padding: 15px;
+    margin: 10px;
+    background-color: white;
+}
+
+/* =========================
+   GROUPING SELECTOR
+========================= */
+
+h3, p{
+    font-family: Verdana, sans-serif;
+}
+/* =========================
+   SECTION HEADERS
+========================= */
+
+h2{
+    background: linear-gradient(to right, #0000ff, #00bfff);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* =========================
+   TYPOGRAPHY STYLING
+========================= */
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* =========================
+   DESCRIPTION TEXT
+========================= */
+
+.highlight{
+    text-align: center;
+    font-style: italic;
+}
+/* =========================
+   EVENT DESCRIPTIONS
+========================= */
+
+table p{
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* =========================
+   NAVIGATION LIST
+========================= */
+
+nav ul{
+
+    list-style-type: none;
+
+    display: flex;
+
+    list-style-position: inside;
+}
+
+/* Navigation items */
+
+nav li{
+
+    margin-right: 15px;
+
+    padding: 5px;
+}
+/* =========================
+   TABLE STYLING
+========================= */
+
+table{
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    background-color: rgba(255,255,255,0.9);
+}
+/* Table headings and cells */
+
+th, td{
+
+    border: 2px solid #cccccc;
+
+    padding: 15px;
+
+    text-align: center;
+}
+/* Table headers */
+
+th{
+
+    background-color: #007BFF;
+
+    color: white;
+
+    font-size: 20px;
+}
+/* Zebra striping */
+
+tr:nth-child(even){
+
+    background-color: #f2f2f2;
+}
+/* Gallery images */
+
+.galleryImage{
+
+    width: 200px;
+
+    height: 150px;
+
+    border: 3px solid black;
+
+    padding: 5px;
+
+    border-radius: 10px;
+}
+/* Row hover effect */
+
+tr:hover{
+
+    background-color: #dbeeff;
+}
+/* =========================
+   EVENT CARD BOX MODEL
+========================= */
+
+.eventCard{
+
+    border: 3px solid #007BFF;
+
+    padding: 15px;
+
+    margin: 10px;
+
+    background-color: white;
+
+    border-radius: 10px;
+}
+/* =========================
+   FORM FIELD FOCUS
+========================= */
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline: 3px solid orange;
+
+    border: 2px solid blue;
+}
+/* =========================
+   VISIBILITY DEMO
+========================= */
+
+.hiddenBox{
+
+    visibility: hidden;
+}
+
+.noneBox{
+
+    display: none;
+}
+form{
+
+    width: 400px;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    margin-bottom: 30px;
+
+    border: 2px solid gray;
+
+    background-color: #f2f2f2;
+
+    border-radius: 10px;
+}
+/* =========================
+   COMMUNITY BULLETIN
+========================= */
+
+.newsArticle{
+
+    column-count: 2;
+
+    column-gap: 30px;
+
+    column-rule: 1px solid gray;
+
+    text-align: justify;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+}
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 768px){
+
+    /* Navigation becomes vertical */
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li{
+        margin: 10px 0;
+    }
+
+    /* Smaller heading */
+
+    h1{
+        font-size: 28px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+
+    /* Responsive images */
+
+    .galleryImage{
+        width: 100%;
+        height: auto;
+    }
+
+    /* Responsive form */
+
+    form{
+        width: 90%;
+    }
+
+    /* Event image */
+
+    #eventImage{
+        width: 80%;
+        height: auto;
+    }
+
+    /* Community Bulletin */
+
+    .newsArticle{
+        column-count: 1;
+    }
+}
+#eventContainer{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.eventBox{
+
+    border:2px solid #007BFF;
+
+    padding:15px;
+
+    width:250px;
+
+    background:white;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+}
+
+.eventBox button{
+
+    margin-top:10px;
+
+    margin-right:10px;
+
+    padding:8px 12px;
+
+    border:none;
+
+    background-color:#007BFF;
+
+    color:white;
+
+    cursor:pointer;
+
+    border-radius:5px;
+
+}
+
+.eventBox button:hover{
+
+    background-color:darkblue;
+
+}
